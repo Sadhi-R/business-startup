@@ -29,7 +29,7 @@ try {
       throw new Error(`${item} contains Holistic Living details`);
     }
     if (item === '/' && !html.includes('Dr. Ram Prasad')) throw new Error('home is missing the mentor');
-    if (item === '/' && !html.includes('88978')) throw new Error('home is missing the school phone number');
+    if (item === '/' && !html.includes('tel:+918897868747')) throw new Error('home is missing the school phone link');
   }
   const missing = await fetch(`http://127.0.0.1:${port}/no-such-page`);
   if (missing.status !== 404) throw new Error('missing page was not a 404');

@@ -1,6 +1,6 @@
 ---
 title: Contact | Business Startup School
-description: Contact Business Startup School. Call +91 88978 68747, WhatsApp +91 80960 80360, or email 10xwealthcreators@gmail.com.
+description: Contact Business Startup School to enquire about the two-month programme, readiness assessment, or startup guidance.
 path: /contact
 image: /images/mentor-skyline.jpg
 ---
@@ -14,10 +14,8 @@ image: /images/mentor-skyline.jpg
   <aside class="panel contact-card">
     <h2>Business Startup School</h2>
     <p>Mentor {{mentor}}, {{role}}.</p>
-    <p><a href="tel:{{phoneTel}}">Call {{phone}}</a></p>
-    <p><a href="{{whatsappUrl}}" target="_blank" rel="noopener noreferrer">WhatsApp {{whatsapp}}</a></p>
-    <p><a href="mailto:{{email}}">{{email}}</a></p>
-    <p class="help">Use the phone number above for calls. WhatsApp uses the number printed on the school’s posters.</p>
+    {{contactIcons}}
+    <p class="help">Tap an icon to call, open WhatsApp, or send an email.</p>
   </aside>
   <form class="panel" action="/api/contact" method="post" novalidate data-contact-form>
     <p class="status" id="form-status" hidden></p>
@@ -43,9 +41,9 @@ image: /images/mentor-skyline.jpg
     <input type="hidden" name="startedAt" value="" />
     <div class="form-actions">
       <button class="btn btn-solid" type="submit"><span class="spinner" hidden></span><span class="submit-label">Send enquiry</span></button>
-      <p class="help">Or <a href="{{whatsappUrl}}">WhatsApp {{whatsapp}}</a></p>
+      <div class="help contact-inline">Or message us: {{contactIcons}}</div>
     </div>
-    <noscript><p class="help">This form uses a short script to send your message. If scripts are blocked, call {{phone}} or email {{email}}.</p></noscript>
+    <noscript><p class="help">This form uses a short script to send your message. If scripts are blocked, use the call, WhatsApp, or email icons.</p></noscript>
   </form>
 </section>
 <script src="/js/contact.js" defer></script>
