@@ -120,6 +120,32 @@ a { color: var(--navy-2); text-underline-offset: 0.18em; }
 .people h3 { margin: 0 0 0.3rem; color: var(--navy); font-size: 1.05rem; }
 .people p { margin: 0; color: var(--muted); }
 
+.wa-join {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 1.5rem 1.5rem 1.5rem 1.8rem;
+}
+.wa-join h2 {
+  margin: 0 0 0.55rem;
+  color: var(--navy);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+.wa-join p { margin: 0 0 1.15rem; color: var(--muted); max-width: 36rem; }
+.wa-join figure { margin: 0; }
+.wa-join img {
+  width: min(100%, 24rem);
+  height: auto;
+  margin-inline: auto;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(14, 28, 54, 0.16);
+}
+
 .cta-band {
   display: flex; justify-content: space-between; gap: 1rem; align-items: center;
   background: var(--navy); color: white; padding: 1.5rem; margin-top: 1.5rem;
@@ -227,7 +253,7 @@ textarea { min-height: 9rem; resize: vertical; }
     background: var(--navy); padding: 0.8rem 1.1rem 1rem; flex-direction: column; align-items: flex-start;
   }
   .nav.open { display: flex; }
-  .pillars, .people, .metrics, .path, .cards { grid-template-columns: 1fr; }
+  .pillars, .people, .metrics, .path, .cards, .wa-join { grid-template-columns: 1fr; }
   .page-hero h1 { max-width: none; }
   .session img { height: 14rem; }
 }

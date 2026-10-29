@@ -1,3 +1,6 @@
+const whatsappGroupUrl =
+  'https://chat.whatsapp.com/GpX6G27lg1v8E2c7vZFpEP?s=qt&p=a&mlu=4&ilr=4&iam=2';
+
 export const site = {
   name: 'Business Startup School',
   tagline: 'Learn · Build · Create impact',
@@ -7,6 +10,8 @@ export const site = {
   phoneTel: '+918897868747',
   whatsappDisplay: '+91 80960 80360',
   whatsappUrl: 'https://wa.me/918096080360',
+  whatsappGroupUrl,
+  whatsappGroupQr: '/images/whatsapp-group-qr.png',
   email: '10xwealthcreators@gmail.com',
   mentor: 'Dr. Ram Prasad',
   mentorRole: 'Engineers Business Mentor',
@@ -46,7 +51,7 @@ export const site = {
     { value: 'startup-guidance', label: 'Startup guidance' },
     { value: 'general', label: 'General enquiry' },
   ],
-  socials: [],
+  socials: [{ label: 'WhatsApp group', href: whatsappGroupUrl }],
   footerNote:
     'Entrepreneurial education. A registered organisation name, address, and tax details are not published on this site yet.',
   footerBlurb:

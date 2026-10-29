@@ -30,6 +30,12 @@ try {
     }
     if (item === '/' && !html.includes('Dr. Ram Prasad')) throw new Error('home is missing the mentor');
     if (item === '/' && !html.includes('tel:+918897868747')) throw new Error('home is missing the school phone link');
+    if ((item === '/' || item === '/contact') && !html.includes('https://chat.whatsapp.com/GpX6G27lg1v8E2c7vZFpEP')) {
+      throw new Error(`${item} is missing the WhatsApp group link`);
+    }
+    if ((item === '/' || item === '/contact') && !html.includes('/images/whatsapp-group-qr.png')) {
+      throw new Error(`${item} is missing the WhatsApp group QR`);
+    }
   }
   const missing = await fetch(`http://127.0.0.1:${port}/no-such-page`);
   if (missing.status !== 404) throw new Error('missing page was not a 404');
